@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xat xifrat</title>
+  <link rel="stylesheet" href="estil.css">
+</head>
+<body>
+  <div class="contenidor">
+
+    <header>
+      <h1>Xat xifrat</h1>
+      <p id="estat">Connectant...</p>
+    </header>
+
+    <div class="targeta">
+      <h3>1. Les meves claus</h3>
+      <button id="btnGenerar">Generar claus</button>
+      <button id="btnEnviarClau">Enviar clau pública</button>
+      <div class="columnes">
+        <div>
+          <label>Clau pública</label>
+          <textarea id="pubPropia" readonly></textarea>
+        </div>
+        <div>
+          <label>Clau privada (no es comparteix)</label>
+          <textarea id="privPropia" readonly></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="targeta">
+      <h3>2. Clau pública remota (es rep sola)</h3>
+      <textarea id="pubRemota"></textarea>
+    </div>
+
+    <div class="targeta">
+      <h3>3. Missatge</h3>
+      <textarea id="missatge" placeholder="Escriu aquí el teu missatge..."></textarea>
+      <button id="btnSignar">Signar</button>
+      <button id="btnEncriptar">Encriptar i enviar</button>
+    </div>
+
+    <div class="targeta">
+      <h3>4. Text encriptat enviat</h3>
+      <textarea id="xifrat" readonly></textarea>
+    </div>
+
+    <div class="targeta">
+      <h3>5. Text encriptat rebut</h3>
+      <textarea id="entrada"></textarea>
+      <pre id="resultat"></pre>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
